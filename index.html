@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading page</title>
+    <style>
+        *{
+            margin:0; padding:0; box-sizing:border-box;
+        }
+        #container{
+            width:100%;
+            height:100vh;
+            background-image: linear-gradient(aquamarine,blanchedalmond);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+            /* loading wala option niche aaya */
+        }
+        p{
+            font-size: 50px;
+            font-family: Georgia;
+            margin-top:10px;
+            animation: loading 2s linear infinite;
+            
+            
+        }
+        .main{
+            width:150px;
+            height:150px;
+            border:6px solid rgba(255, 0, 0, 0.315);
+            border-top:10px white;
+            border-radius: 50%;
+            animation: loader 2s linear infinite;
+        }
+        @keyframes loader {
+            0%{
+                transform: rotate(0deg);
+            }
+
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+
+        @keyframes loading{
+            0%{
+                opacity: 0;
+                /* Transform: scale(0.5 ,0.7); */
+            }
+            50%{
+                opacity: 1;
+
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        </style>
+        </head>
+        <body>
+                <div id="container">
+                    <div class="main"></div>
+                    <p>Loading...</p>
+                </div>
+        </body>
+        </html>
